@@ -1,0 +1,169 @@
+<!doctype html>
+
+<html lang="en">
+
+  <head>
+
+  <style>
+
+    *{
+
+      user-select : none;
+
+      -ms-user-select: none;
+
+      -moz-user-select: none;
+
+      -webkit-user-select: none;
+
+    }
+
+    body{
+
+      width: 100vw;
+
+      height: 100vh;
+
+      text-align: center;
+
+      padding: 20px;
+
+      box-sizing: border-box;
+
+      margin:0;
+
+      padding-top: 20vh;
+
+    }
+
+    a{
+
+      height:60px;
+
+      margin:0 auto !important;
+
+      width: 70vw;
+
+      display: block; 
+
+      border: 2px solid #000;
+
+      border-radius: 5px;
+
+      -webkit-tap-highlight-color: transparent;
+
+      text-decoration: none;
+
+      padding: 0;
+
+      background: #fff;
+
+    }
+
+    a>span{
+
+      line-height: 60px;
+
+      color: #000;
+
+      text-shadow:0 0 2px #fff;
+
+    }
+
+    #pro{
+
+      width:70vw;
+
+      height:60px;
+
+      position: relative;
+
+      top:-62px;
+
+      border: none;
+
+      margin: 0;
+
+      z-index: -1;
+
+    }
+
+  </style>
+
+  <script>
+
+    function s(e=document.getElementById("pro")){
+
+      document.getElementById("download").style.background = "none";
+
+      document.getElementById("stats").innerHTML = "Downloading";
+
+      e.value += 0.1;
+
+      if(e.value<100){
+
+        setTimeout(()=>{s(e)},0.1)
+
+      }
+
+      else{
+
+        e.value = 0;
+
+        s(e)
+
+      }
+
+    }
+
+  </script>
+
+    <meta charset="utf-8"/>
+
+    <link rel="icon" href="icon.png"/>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+
+    <meta name="theme-color" content="#000000"/>
+
+    <link rel="apple-touch-icon" href="my.jpg"/>
+
+    <meta name="keywords" content="learn JavaScript, JavaScript,js,js is easy, shaishab, shaishabcoding, JavaScript expert,free, EcmaScript"/>
+
+    <meta property="og:title" content="Js is easy">
+
+    <meta property="og:type" content="article"/>
+
+    <meta property="og:image" content="icon.png">
+
+    <meta property="og:url" content="https://shaishabcoding.github.io">
+
+    <meta property="og:description" content="The Best JavaScript learning App in Bengali language. Download and enjoy 🙂">
+
+    <meta property="og:site_name" content="Shaishab's Coding">
+
+    <title>Js is easy</title>
+
+  </head>
+
+  <body>
+
+      <img src="icon.png"><br><br>
+
+      <div id="app">
+
+        <a onclick="s()"  id="download" download="Js is easy" href="myshaishab.jsiseasy.apk">
+
+          <span id="stats">Download</span>
+
+        </a>
+
+        <progress id="pro" max="100" value="0"></progress>
+
+      </div>
+
+  </body>
+
+</html>
+
+
